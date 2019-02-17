@@ -4,18 +4,6 @@ jobs:
     docker:
       - image: circleci/node:8-browsers
     steps:
-      # - run:
-      #     name: Install lighthouse
-      #     command: |
-      #       sudo npm install -g lighthouse
-      # - run:
-      #     name: Check lighthouse
-      #     command: |
-      #       lighthouse --version
-      # - run:
-      #     name: Run lighthouse
-      #     command: |
-      #       lighthouse https://blog.sshn.me/ --save-assets
       - run:
           name: Install dependencies
           command: |
