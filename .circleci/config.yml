@@ -50,8 +50,8 @@ jobs:
       # Install cypress
       - run: npm install cypress cypress-cucumber-preprocessor
 
-      # Start server
-      - run: npm start
+      # # Start server
+      # - run: npm start
 
       # run tests!
       - run: npm run s-test
