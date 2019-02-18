@@ -25,7 +25,7 @@ describe('MyComponent', () => {
     expect(component).toMatchSnapshot();
 });
 
-  it.skip('should render the title correctly', () => {
+  it('should render the title correctly', () => {
     const app = shallow(<App />);
     expect(app.find('h2').text()).toEqual('Contacts');
   });
@@ -34,10 +34,4 @@ describe('MyComponent', () => {
     const app = shallow(<CreateContact />);
     expect(app.find('h3').text()).toEqual('Create Contact');
   });
-
-  it('should check the type of button', () => {
-    const wrapper = shallow(<ContactList />);
-    expect(wrapper.find('.add-contact'))
-  });
-
 });
