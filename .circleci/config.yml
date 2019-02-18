@@ -28,17 +28,6 @@
 version: 2
 jobs:
   build:
-    docker:
-      # specify the version you desire here
-      - image: circleci/node:7.10
-
-      # Specify service dependencies here if necessary
-      # CircleCI maintains a library of pre-built images
-      # documented at https://circleci.com/docs/2.0/circleci-images/
-      # - image: circleci/mongo:3.4.4
-
-    working_directory: ~/repo
-
     steps:
       - checkout
 
@@ -54,7 +43,13 @@ jobs:
       - save_cache:
           paths:
             - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}    
+          key: v1-dependencies-{{ checksum "package.json" }}
+
+      # Install cypress
+      - run: npm install cypress cypress-cucumber-preprocessor
+
+      # Start server
+      - run: npm start 
 
       # run tests!
       - run: npm run s-test
