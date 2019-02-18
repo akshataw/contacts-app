@@ -35,11 +35,6 @@ describe('MyComponent', () => {
     expect(app.find('h3').text()).toEqual('Create Contact');
   });
 
-  it.skip('should render the button correctly', () => {
-    const app = shallow(<CreateContact />);
-    expect(app.find('button').text()).toEqual('Add Contact');
-  });
-
   it('should check the type of button', () => {
     const wrapper = shallow(<ContactList />);
     expect(wrapper.find('.add-contact'))
