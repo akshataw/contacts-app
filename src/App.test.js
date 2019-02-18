@@ -16,7 +16,28 @@ describe('MyComponent', () => {
   });
 
   it('should render correctly with no props', () => {
-  const component = shallow(<App />);
-  expect(component).toMatchSnapshot();
+    const component = shallow(<App />);
+    expect(component).toMatchSnapshot();
 });
+
+  it('should render CreateContact correctly', () => {
+    const component = shallow(<CreateContact />);
+    expect(component).toMatchSnapshot();
+});
+
+  it.skip('should render the title correctly', () => {
+    const app = shallow(<App />);
+    expect(app.find('h2').text()).toEqual('Contacts');
+  });
+
+  it('should render the title of CreateContact correctly', () => {
+    const app = shallow(<CreateContact />);
+    expect(app.find('h3').text()).toEqual('Create Contact');
+  });
+
+  it.skip('should render the button correctly', () => {
+    const app = shallow(<CreateContact />);
+    expect(app.find('button').text()).toEqual('Add Contact');
+  });
+
 });

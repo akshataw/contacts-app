@@ -62,7 +62,7 @@ class App extends Component {
     return (
       <div className="App">
        <div className="well">
-        <h2>Contacts</h2>
+        <h2 className="text-center">Contacts</h2>
        </div>
         <Route exact path='/' render={() => (
           <ContactList contacts={this.state.contacts} onDeleteContact={this.removeContact} />

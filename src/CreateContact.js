@@ -48,7 +48,7 @@ class CreateContact extends React.Component{
         <Link to="/">
          <img src="/back.png" alt="back" Style="height:50px; width:50px;" />
         </Link>&nbsp;
-        Create Contact
+        <h3>Create Contact</h3>
         </div>
         <br/>
         <form className="create-form" onSubmit={this.handleSubmit}>
@@ -70,7 +70,7 @@ class CreateContact extends React.Component{
                    onChange={this.handleChange.bind(this)} />
             <br/>
             <br/>
-            <button onClick={this.handleSuccess}>Add Contact</button>
+            <button id="save-contact" className="btn btn-primary" onClick={this.handleSuccess}>Add Contact</button>
            </div>
           </div>
          </div>
