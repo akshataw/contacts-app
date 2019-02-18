@@ -13,8 +13,12 @@ jobs:
           command: |
             npm install cypress cypress-cucumber-preprocessor
       - run:
+          name: Start server
+          command: |
+            npm start
+      - run:
           name: run cypress tests
           command: |
-            ./node_modules//.bin/cypress run
+            npm run s-test
       - store_artifacts:
           path: '.'
