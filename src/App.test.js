@@ -40,4 +40,9 @@ describe('MyComponent', () => {
     expect(app.find('button').text()).toEqual('Add Contact');
   });
 
+  it('should check the type of button', () => {
+    const wrapper = shallow(<ContactList />);
+    expect(wrapper.find('.add-contact'))
+  });
+
 });
